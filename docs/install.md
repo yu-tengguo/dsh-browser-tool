@@ -5,6 +5,21 @@
 
 > 前提：本机装有 Chrome 或 Edge（插件默认自动检测；也可以用 `chromePath` / 环境变量 `CHROME_PATH` 指定）。
 
+## 方式零：一键安装脚本（最快）
+
+仓库根目录运行（Node ≥ 22）：
+
+```bash
+node install.mjs
+```
+
+脚本自动完成：定位 `$DSH_HOME` → 创建 `~/.dsh/.agent-presets/standard-browser` → 复制 `browser.mjs`
+→ 以产品 `standard` 组合为基底写入 `agent.cordis.yml` 并挂载 `builtin-browser` → 生成 `preset.yml`
+→ 在 `settings.yaml` 写入默认预设（若你已自定义过 default 则不覆盖）。幂等，可重复执行。
+
+> 若自动探测不到产品 standard 组合（报 WARNING 并降级为仅含浏览器工具的极简预设），
+> 可带 `DSH_PACKAGE_DIR=<dsh安装目录>` 重跑，或按下方手动方式合并。
+
 ## 方式一：新建用户预设（推荐，可设为默认）
 
 1. 创建预设目录（Windows 示例）：
