@@ -34,7 +34,13 @@ DSH 自带 `web_search`，但产品配置常把纯 HTTP 的 `web_fetch` 关掉�
 
 完整分步指南见 **[docs/install.md](docs/install.md)**（新建预设 / 挂已有预设 / 设为默认 / 卸载）。
 
-快速开始：
+**一键安装**（Node ≥ 22；自动定位 `$DSH_HOME`、创建 `standard-browser` 预设、复制插件、写入默认设置；幂等可重复执行）：
+
+```bash
+node install.mjs
+```
+
+手动快速开始：
 
 1. 把 `browser.mjs` 复制到你的用户预设目录，如 `~/.dsh/.agent-presets/standard-browser/`；
 2. 在该预设的 `agent.cordis.yml` **末尾追加**：
@@ -122,7 +128,14 @@ complex pages (Baidu Baike, XHS, Weibo, Amazon, …) need a real browser. This p
 
 Step-by-step guide: **[docs/install.md](docs/install.md)** (new preset / existing preset / default preset / uninstall).
 
-Quick start:
+**One-command installer** (Node ≥ 22; locates `$DSH_HOME`, creates the `standard-browser` preset,
+copies the plugin and sets it as the default; idempotent):
+
+```bash
+node install.mjs
+```
+
+Manual quick start:
 
 1. Copy `browser.mjs` into a user agent preset directory, e.g. `~/.dsh/.agent-presets/standard-browser/`.
 2. Append to that preset's `agent.cordis.yml`:
