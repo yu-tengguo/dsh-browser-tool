@@ -1,0 +1,7 @@
+# local junk
+node_modules/
+*.log
+shots/
+.chrome-profile/
+smoke-shot.png
+.DS_Store
